@@ -1,0 +1,32 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap' rel='stylesheet')
+        link(rel="stylesheet", href="/css/login.css")
+    body 
+        section(class="backgroundBanners")
+            section()
+            section()
+        section(class="loginSection")
+            header(class="loginTitle")
+                h1 Inicia Sesion
+            section(class="wp-cardsLogin")
+                div(class="card" id="studentCard" toggle="false")
+                    .wp-titleCard
+                        h2 Estudiante
+                    .wp-img 
+                        img(src="/assets/img/estudiante.svg", alt="")
+                div(class="card" id="teacherCard" toggle="true")
+                    .wp-titleCard
+                        h2 Maestro
+                    .wp-img 
+                        img(src="/assets/img/profesor.svg", alt="")
+            footer 
+                img(class="logo" src="/assets/img/logo.png" alt="logo - refuerzate")
+        
+        script(src="/js/index.js" type="text/javascript") 

@@ -1,0 +1,156 @@
+$primario: #E52220;
+$primarioLight: #FB8483;
+$primarioSatured: #8C0100;
+$secundario: #159799;
+$secundarioLight: #7FF0F2;
+$secundarioSatured: #1F5859;
+$negro: #191919;
+$blanco: #fcfcfc;
+$gris: #f2f2f2;
+$error: #FF0013;
+$errorLight: #FF8089;
+$success: #00CF0B;
+$successLight: #68CF6D;
+$warng: #FFD300;
+$warngLight: #FFE980;
+$titulo1: 80px;
+$titulo2: 65px;
+$titulo3: 45px;
+$textoGrande: 35px;
+$textoMediano: 25px;
+$textoNormal: 19px;
+$textoPequeño: 15px;
+$comfortaa: 'Comfortaa',sans-serif;
+$openSans: 'Open Sans',sans-serif;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $openSans;
+    font-size: $textoNormal;
+    color: $negro;
+}
+
+body{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    background: url(./../assets/img/login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 100vh;
+}
+
+.backgroundBanners{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    z-index: -1;
+    section{
+        width:50%;
+        height: 100vh;
+        &:first-child{
+            background:rgba($color: $primario, $alpha: .63)
+        }
+        &:last-child{
+            background:rgba($color: $secundario, $alpha: .63)
+        }
+    }
+
+}
+.loginSection{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    padding-top: 30px;
+    header{
+        width: 100%;
+        height:auto;
+        padding: 20px;
+        margin-bottom: 10px;
+        h1{
+            font-family: $comfortaa;
+            font-size: $titulo1;
+            color:$blanco;
+            text-align: center;
+        }
+    }
+    .wp-cardsLogin{
+        width: 100%;
+        height:auto;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-around;
+        padding: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .card{
+            width:35%;
+            background: $blanco;
+            border-radius:22px;
+            box-shadow: 0 3px 99px rgba($color: #000000, $alpha: .75);
+            padding: 0 20px;
+            position: relative;
+            transition: all 0.3s linear;
+            .wp-titleCard{
+                width:100%;
+                text-align: center;
+                padding: 35px 45px;
+                h2{
+                    font-size: $titulo2;
+                    font-family: $comfortaa;
+                    text-align: left;
+                }
+            }
+            .wp-img{
+                width: 100%;
+                padding: 45px;
+                box-sizing: border-box;
+                img{
+                    width:80% ;
+                }
+            }
+            &:first-child{
+                margin-right: -320px;
+                &::after{
+                    content:'';
+                    width: 10%;
+                    height:100%;
+                    background: $primario;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-top-left-radius: 22px;
+                    border-bottom-left-radius: 22px;
+
+                }
+            }
+            &:last-child{
+                margin-left: -320px;
+                z-index: 3;
+                &::after{
+                    content:'';
+                    width: 10%;
+                    height:100%;
+                    background: $secundario;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-top-right-radius: 22px;
+                    border-bottom-right-radius: 22px;
+
+                }
+            }
+        }
+    }
+}
